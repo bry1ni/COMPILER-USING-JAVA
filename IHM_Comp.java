@@ -55,7 +55,7 @@
 				public void actionPerformed(ActionEvent event) {
 					if (verifLang(codec.getText())==true) {
 						Analyser(codec.getText()); 
-					}else JOptionPane.showMessageDialog(null, "LE CODE DOIR ETRE EN LETTRES LATIN UNIQUEMENT SANS ACCENTS ET SANS CARACTERES SPECIAUX.",
+					}else JOptionPane.showMessageDialog(null, "LE CODE DOIT ETRE EN LETTRES LATIN UNIQUEMENT SANS ACCENTS ET SANS CARACTERES SPECIAUX.",
 						      "ERREUR COMPI", JOptionPane.ERROR_MESSAGE);
 					   
 					}});
@@ -116,7 +116,7 @@
 		        		}
 		        	}
 		        
-		        //remplir liste mots clé
+		        //remplir liste mots clÃ©
 		        for(int j=0;j<motC.length;j++) {
 	        			if ( (mot.equals(motC[j])) || (mot.equals(motC[j].toUpperCase()))) {
 	        				if((list_motC.contains(mot)==false) && (list_motC.contains(mot.toUpperCase())==false)){
@@ -164,7 +164,7 @@
 	                program = list_mot.get(i+1);
 	            }
 		    	
-		    	//avoir tout les fonctions et les procédures
+		    	//avoir tout les fonctions et les procÃ©dures
 		    	if((list_mot.get(i).contains("FUNCTION"))){
 	                functs.add(list_mot.get(i+1));
 	            }
@@ -177,12 +177,12 @@
 		    ArrayList<String> newidList = (ArrayList<String>) list_id.stream().distinct().collect(Collectors.toList());
 		    
 		    System.out.println("Nom du Programme: "+program);
-		    System.out.println("Les Fonctions: "+functs+" // "+"Les Procédures: "+voids);
-		    System.out.println("Mots clé: "+list_motC);
+		    System.out.println("Les Fonctions: "+functs+" // "+"Les ProcÃ©dures: "+voids);
+		    System.out.println("Mots clÃ©: "+list_motC);
 		    System.out.println("Identificateurs: "+newidList);
 		    System.out.println("Constants: "+list_num);
-		    System.out.println("Opérateurs: "+list_op);
-		    System.out.println("Séparateurs: "+list_sp);
+		    System.out.println("OpÃ©rateurs: "+list_op);
+		    System.out.println("SÃ©parateurs: "+list_sp);
 		    System.out.println("Nombre de lignes: "+codec.getLineCount()); //afficher le nombre de lignes
 		}
 	
